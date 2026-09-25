@@ -2,13 +2,13 @@
 
 import people from './lib/people.json';
 
-const table = document.body.querySelector('.dashboard');
+const table = document.querySelector('.dashboard');
 
 people.forEach((person) => {
   const row = document.createElement('tr');
   const values = [
     person.name,
-    person.sex,
+    person.sex === 'm' ? 'Male' : 'Female',
     person.born,
     person.died,
     person.died - person.born,
